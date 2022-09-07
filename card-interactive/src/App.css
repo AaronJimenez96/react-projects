@@ -10,10 +10,9 @@
 }
 
 .App{
-  background-color: hsl(0, 0%, 100%);
-}
-.card{
- width: 35%;
- height: 100vh;
- background-image:url('/images/bg-main-desktop.png')
+  content: '';
+  position: absolute;
+  background-image:url('./images/bg-main-desktop.png');
+  background-repeat: no-repeat;
+  background-color:  hsl(0, 0%, 100%);
 }

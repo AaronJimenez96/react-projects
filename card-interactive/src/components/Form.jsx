@@ -1,30 +1,26 @@
 import React from 'react'
 import '../styles/Form.css'
-import { useState } from 'react'
+
 
 function Form({ name }) {
     return (
-        <div className='space-y-4'>
-            <div className='flex justify-center flex-col space-y-1 p-5'>
-                <label className='text-sm text-bold text-gray-500'>Cardholder Name</label>
-                <input placeholder=' e.g. Jane Appleseed' type='text'>{name}</input>
+        <div className='flex flex-col space-y-2'>
+            <label>NAME</label>
+            <input type='text' placeholder='Your full name' className='rounded pl-1'></input>
+
+            <label>NUMBER</label>
+            <input type='text' placeholder='Your full name' className='rounded pl-1'></input>
+
+            <div className='flex space-x-8'>
+                <label>EXT. DATE (MM/YY)</label>
+                <label>CVV</label>
             </div>
-            <div className='flex justify-center flex-col space-y-1 p-5'>
-                <label className='text-sm text-bold text-gray-500'>Cardholder Number</label>
-                <input placeholder=' e.g. 1234 5678 9123 0000' type='text'>{name}</input>
+            <div className='flex space-x-3'>
+                <input type='text' placeholder='MM' className='w-20 rounded pl-1'></input>
+                <input type='text' placeholder='YY' className='w-20 rounded pl-1'></input>
+                <input type='text' placeholder='CVV' className='w-20 rounded pl-1'></input>
             </div>
-            <div className='flex justify-center flex-col space-y-1 p-5'>
-                <div className='flex'>
-                    <div>
-                        <label className='text-sm text-bold text-gray-500'>Exp. Date (MM/YY)</label>
-                        <input placeholder=' e.g. 1234 5678 9123 0000' type='text'>{name}</input>
-                    </div>
-                    <div>
-                        <label className='text-sm text-bold text-gray-500'>Exp. Date (MM/YY)</label>
-                        <input placeholder=' e.g. 1234 5678 9123 0000' type='text'>{name}</input>
-                    </div>
-                </div>
-            </div>
+            <button type='submit' className='w-50 mt-4 p-1 bg-violet-900 text-white rounded-lg'>SAVE</button>
         </div>
     );
 }
