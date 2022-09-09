@@ -15,4 +15,5 @@
   background-image:url('./images/bg-main-desktop.png');
   background-repeat: no-repeat;
   background-color:  hsl(0, 0%, 100%);
+  background-size:contain;
 }
