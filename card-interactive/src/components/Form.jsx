@@ -7,13 +7,13 @@ function Form(props) {
     const [number, setNumber] = useState('');
 
   const handleName = event => {
-    const result = event.target.value.replace(/[^a-z ]/gi, '');
-    setMessage(result);
+    const dataName = event.target.value.replace(/[^a-z ]/gi, '');
+    setMessage(dataName);
   };
 
   const handleCardHolder = event => {
-    const result2 =  event.target.valueevent.target.value.replace(/[^0-9]/g, "");
-    setNumber(result2);
+    const dataCard =  event.target.valueevent.target.value.replace(/[^0-9]/g, "");
+    setNumber(dataCard);
   }
     return (
         <div >
