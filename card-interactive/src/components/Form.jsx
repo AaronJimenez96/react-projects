@@ -21,12 +21,12 @@ function Form(props) {
   //     setNumber(cardNumber);
   //     setMonth(cardMonth);
   // }
-
+  const handleRegistration = (data) => console.log(data);
   return (
     <div>
       <form
         className="flex flex-col space-y-3"
-        onSubmit={handleSubmit((data) => console.log(data))}
+        onSubmit={handleSubmit(handleRegistration)}
       >
         <label className="text-sm text-gray-600">CARDHOLDER NAME</label>
         <input
