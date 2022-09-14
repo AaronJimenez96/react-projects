@@ -10,17 +10,7 @@ function Form(props) {
   } = useForm();
   const regex =
     /^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/;
-  // const handleName = event => {
-  //     const dataName = event.target.value.replace(/[^a-z ]/gi, '');
-  //     setMessage(dataName);
-  // };
-
-  // const handleCardHolder = event => {
-  //     const cardNumber =  event.target.value.replace(/[^0-9]/g, "");
-  //     const cardMonth =  event.target.value.replace(/[^0-9]/g, "");
-  //     setNumber(cardNumber);
-  //     setMonth(cardMonth);
-  // }
+ 
   const handleRegistration = (data) => console.log(data);
   return (
     <div>
