@@ -1,19 +1,26 @@
 import React from "react";
 import "../styles/Form.css";
 import { useForm } from "react-hook-form";
+import Card from "./Card";
 
-function Form(props) {
+function Form() {
   const {
     register,
     handleSubmit,
+    watch,
     formState: { errors },
   } = useForm();
   const regex =
     /^(?:4[0-9]{12}(?:[0-9]{3})?|[25][1-7][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/;
- 
-  const handleRegistration = (data) => console.log(data);
+
+  
+  const handleRegistration = (data) => {
+    console.log(data);
+  }
+
   return (
-    <div>
+    <div className="flex items-center justify-evenly flex-row-reverse">
+      <div>
       <form
         className="flex flex-col space-y-3"
         onSubmit={handleSubmit(handleRegistration)}
@@ -107,7 +114,13 @@ function Form(props) {
           SAVE
         </button>
       </form>
+      </div>
+      <div>
+        <Card watch={watch}/>   
+      </div>
+     
     </div>
+  
   );
 }
 
