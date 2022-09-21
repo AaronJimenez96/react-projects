@@ -2,7 +2,7 @@ import React from "react";
 import CardFront from "../images/bg-card-front.png";
 import CardBack from "../images/bg-card-back.png";
 
-function Card(handleSubmit) {
+function Card({watch}) {
   return (
     <div className="static">
       <div className="static grid">
@@ -19,12 +19,12 @@ function Card(handleSubmit) {
             stroke="#fff"
           />
         </svg>
-        <label className="absolute">{data?.name}</label>
+        <label className="absolute">{watch('name')}</label>
         <img className="card-front" src={CardFront} />
       </div>
       <div className="static grid">
         <img src={CardBack} className="pl-8 pt-5" />
-        <label className="absolute">064</label>
+        <label className="absolute">{watch('cvv')}</label>
       </div>
     </div>
   );
